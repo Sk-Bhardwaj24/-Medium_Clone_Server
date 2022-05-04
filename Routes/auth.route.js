@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
 const authController = require("../Controllers/auth.controller");
-
+app.use(cors());
 app.post("/signUp", authController.register);
-app.post("/signIn", authController.signIn);
-app.put("/signOut", authController.signOut);
-app.get("/failed", (req, res) => {
-  res.send("Some error occured while login to google");
-});
+app.post("/signIn", authController.Signin);
 
 module.exports = app;

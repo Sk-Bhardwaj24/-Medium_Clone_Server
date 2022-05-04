@@ -1,7 +1,11 @@
 const express = require("express");
 const app = express();
+var cors = require("cors");
+const { PATH } = require("./CommonLib/constant");
+const Authroutes = require("./Routes/auth.route");
 const bodyParser = require("body-parser");
+app.use(cors());
 app.use(bodyParser.json([]));
-app.use(PATH.USER, userRoute);
-app.use(PATH.AUTH, authRoute);
+// app.use(PATH.USER, userRoute);
+app.use(PATH.AUTH, Authroutes);
 module.exports = app;

@@ -9,4 +9,4 @@ const userAuth = new mongoose.Schema({
   name: { type: String },
 });
 
-module.exports = mongoose.model("user", userAuth);
+module.exports = mongoose.model("userAuth", userAuth);
