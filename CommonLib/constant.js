@@ -4,6 +4,7 @@ let constantObj = {
     AUTH: "/auth",
     BLOGLIST: "/bloglist",
     NEWSLIST: "/newslist",
+    BLOG: "/blog",
   },
 };
 
